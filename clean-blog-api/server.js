@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 // Route Mounting
 app.use('/api/auth', require('./routes/authRoutes'));
-//app.use('/api/posts', require('./routes/postRoutes'));
+app.use('/api/posts', require('./routes/postRoutes'));
 
 // Basic health check route
 app.get('/', (req, res) => {
