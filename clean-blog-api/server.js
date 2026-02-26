@@ -15,9 +15,9 @@ mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB Connected successfully'))
 .catch(err => console.error('MongoDB connection error:', err));
 
-// // Route Mounting
-// app.use('/api/auth', require('./routes/authRoutes'));
-// app.use('/api/posts', require('./routes/postRoutes'));
+// Route Mounting
+app.use('/api/auth', require('./routes/authRoutes'));
+//app.use('/api/posts', require('./routes/postRoutes'));
 
 // Basic health check route
 app.get('/', (req, res) => {
